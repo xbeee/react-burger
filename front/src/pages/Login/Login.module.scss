@@ -1,0 +1,107 @@
+.container {
+	margin: 50px auto;
+	padding: 20px;
+	max-width: 350px;
+	background-color: #2c2c2c;
+	border-radius: 10px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	@media (max-width: 575.96px) {
+		margin: 20px auto;
+	}
+}
+
+.formGroup {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 20px;
+	margin-top: 10px;
+	position: relative;
+
+	label{
+		color: white;
+	}
+}
+
+.label {
+	position: absolute;
+	left: 15px;
+	top: -15px;
+	color: #232323;
+	font-weight: bold;
+	font-size: 12px;
+	transition: top 0.3s, font-size 0.3s, color 0.3s;
+}
+
+.inputContainer {
+	position: relative;
+}
+
+.inputIcon {
+	position: absolute;
+	left: 10px;
+	top: 44%;
+	color: #232323;
+}
+
+.formControl_login {
+	// width: calc(100% - 20px);
+	width: 100%;
+	padding: 20px 10px 10px 40px;
+	border-radius: 5px;
+	border: 1px solid #fff;
+	outline: none;
+	transition: border-color 0.3s;
+}
+
+.formControl:focus {
+	border-color: #fe5f1e;
+}
+
+.btnPrimary {
+	display: block;
+	width: 100%;
+	padding: 10px;
+	border: none;
+	border-radius: 5px;
+	background-color: #fe5f1e;
+	color: #fff;
+	font-weight: bold;
+	cursor: pointer;
+	transition: opacity 0.3s;
+	margin-top: 20px; /* Добавили отступ для кнопки */
+}
+
+.btnPrimary:hover {
+	// background-color: #2c2c2c;
+	opacity: .7;
+}
+
+.checkboxContainer {
+	display: flex;
+	align-items: center;
+	margin-top: 20px;
+}
+
+.checkbox {
+	margin-right: 10px;
+}
+
+.agreeLabel {
+	font-size: 12px;
+}
+
+.registerLink {
+	text-align: center;
+	color: #ffffff;
+	font-size: 14px;
+	margin-top: 15px;
+}
+
+.registerLink a {
+	color: #fe5f1e;
+	text-decoration: none;
+}
+
+.registerLink a:hover {
+	text-decoration: underline;
+}

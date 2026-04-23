@@ -1,0 +1,94 @@
+[
+    {
+        "category": "Холодные,Горячие",
+        "id": 1,
+        "imageURl": "/assets/img/rolls/Холодные_2025-05-15_232521123.png",
+        "name": "Ролл Император",
+        "price": 219,
+        "rating": 4,
+        "sizes": "200гр.,270гр."
+    },
+    {						
+        "category": "Запеченные",
+        "id": 2,
+        "imageURl": "/assets/img/rolls/Запеченные_2025-05-15_235100113.png",
+        "name": "Ролл Император",
+        "price": 309,
+        "rating": 2,
+        "sizes": "105гр."
+    },
+    {					
+        "category": "Холодные",
+        "id": 3,
+        "imageURl": "/assets/img/rolls/Холодные_2025-05-16_001036298.png",
+        "name": "Ролл Филадеьфия",
+        "price": 309,
+        "rating": 10,
+        "sizes": "200гр.,105гр.,270гр."
+    },
+    {					
+        "category": "Горячие,Темпурные",
+        "id": 4,
+        "imageURl": "/assets/img/rolls/4_2025-05-18_043828471.png",
+        "name": "Темпурный Цезарь",
+        "price": 239,
+        "rating": 5,
+        "sizes": "105гр.,200гр."
+    },
+    {
+        						
+        "category": "",
+        "id": 5,
+        "imageURl": "/assets/img/rolls/_2025-05-16_022512112.png",
+        "name": "Калифорния с крабом",
+        "price": 139,
+        "rating": 7,
+        "sizes": "105гр.,200гр.",
+        "types": "0, 1"
+    },
+    {						
+        "category": "Запеченные,С угрем,Горячие",
+        "id": 6,
+        "imageURl": "/assets/img/rolls/Запеченные_С угрем_Горячие_2025-05-16_224248182.png",
+        "name": "Ролл Смородина",
+        "price": 499,
+        "rating": 5,
+        "sizes": "105гр."
+    },
+    {				
+        "category": "",
+        "id": 7,
+        "imageURl": "/assets/img/rolls/_2025-05-16_224444213.png",
+        "name": "Ролл с креветками",
+        "price": 499,
+        "rating": 5,
+        "sizes": "105гр.,200гр."
+    },
+    {							
+        "category": "Горячие",
+        "id": 8,
+        "imageURl": "/assets/img/rolls/Горячие_2025-05-16_224906311.png",
+        "name": "Ролл четер",
+        "price": 319,
+        "rating": 3,
+        "sizes": "105гр.,200гр.,270гр."
+    },
+    {							
+        "category": "Запеченные",
+        "id": 9,
+        "imageURl": "/assets/img/rolls/Запеченные_2025-05-16_225054104.png",
+        "name": "Ролл Интер",
+        "price": 419,
+        "rating": 4,
+        "sizes": "200гр."
+    },
+    {					
+        "category": "Холодные",
+        "id": 10,
+        "imageURl": "/assets/img/rolls/Холодные_2025-05-16_225219766.png",
+        "name": "Ролл Сырный",
+        "price": 209,
+        "rating": 6,
+        "sizes": "105гр."
+    }
+]

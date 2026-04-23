@@ -1,0 +1,47 @@
+@import "./header";
+@import "./button";
+@import "./categories";
+@import "./sort";
+@import "./roll-block";
+@import "./footer";
+
+.red {
+	background-color: red;
+	color: white;
+}
+.green {
+	background-color: rgb(0, 177, 88);
+	color: white;
+	transition: 0.3s;
+	border: 1px solid white;
+	&:hover {
+		opacity: 0.7;
+		background-color: rgb(0, 177, 88);
+	}
+}
+.loader {
+	width: 48px;
+	height: 48px;
+	border: 5px solid #ff3d00;
+	border-bottom-color: #fff;
+	border-radius: 50%;
+	display: inline-block;
+	box-sizing: border-box;
+	animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+.loaderContainer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 50vh;
+}

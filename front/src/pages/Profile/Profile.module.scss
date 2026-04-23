@@ -1,0 +1,119 @@
+.container {
+	margin: 10px auto;
+	padding: 20px;
+	max-width: 350px;
+	background-color: #2c2c2c;
+	border-radius: 10px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+	@media (max-width: 575.96px) {
+		margin: 10px 20px;
+	}
+}
+
+h2 {
+	text-align: center;
+	color: #fff;
+	font-size: 24px;
+}
+
+.userInfo {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 20px;
+	font-size: 21px;
+	
+}
+
+.userInfo div {
+	width: 100%;
+
+	p{
+		margin-bottom: 10px;
+	}
+}
+
+.error {
+	color: #ff0000;
+	font-size: 14px;
+	margin-top: 5px;
+}
+
+input {
+	width: calc(100%);
+	padding: 20px 10px 10px 10px;
+	border-radius: 5px;
+	border: 1px solid #fff;
+	outline: none;
+	transition: border-color 0.3s;
+	font-size: 16px;
+	margin-top: 4px;
+}
+
+.btnPrimary,
+.btnSecondary,
+.btnLogout {
+	display: block;
+	width: 100%;
+	padding: 10px;
+	border: none;
+	border-radius: 5px;
+	font-weight: bold;
+	text-align: center;
+	text-decoration: none;
+	cursor: pointer;
+	transition: background-color 0.3s;
+	font-size: 16px;
+}
+
+.btnPrimary {
+	background-color: #9c9c9c;
+	color: #fff;
+}
+
+.btnPrimary:hover {
+	background-color: #7c7c7c;
+}
+
+.btnSecondary {
+	background-color: #00b30f;
+	color: #fff;
+	margin-top: 10px;
+	transition: 0.3s;
+}
+
+.btnLogout {
+	margin-top: 10px;
+	color: #fff;
+	background-color: #ff0000;
+}
+.btnSecondary:hover,
+.btnLogout:hover {
+	opacity: 0.7;
+}
+
+.profileImage {
+	width: 100%;
+	margin: 10px 0;
+}
+
+.edited {
+	border: 1px solid#00b30f;
+	background-color: #35df43;
+	color: white;
+	padding: 10px;
+	border-radius: 10px;
+	text-align: center;
+	margin-top: 20px;
+}
+
+.disabled {
+	opacity: 0.5; /* Уменьшить прозрачность кнопки */
+	cursor: not-allowed; /* Изменить курсор на неактивный */
+	/* Другие стили по вашему усмотрению */
+}
+
+.btnBlocks {
+	display: flex;
+	gap: 10px;
+}

@@ -1,0 +1,63 @@
+.roll-info {
+	/* padding: 20px; */
+	border-radius: 8px;
+	background-color: #ffffff; /* Белый цвет */
+	margin-bottom: 20px;
+}
+
+.roll-info__title {
+	text-align: center;
+	margin: 15px 0;
+	font-size: 28px;
+	color: rgb(0, 0, 0); /* Основной цвет */
+}
+
+.roll-info__description {
+	margin-top: 10px;
+	font-size: 16px;
+	color: #333; /* Цвет текста */
+}
+
+.roll-info__pickup-only {
+	margin-top: 20px;
+	font-size: 16px;
+	color: #666; /* Цвет текста */
+}
+
+.roll-info__highlight-title {
+	text-align: center;
+	margin: 15px 0;
+	font-size: 24px;
+	color: #000000; /* Основной цвет */
+}
+
+.roll-info__highlight-list {
+	list-style-type: none;
+	padding-left: 0;
+}
+
+.roll-info__highlight-item {
+	margin-bottom: 8px;
+	font-size: 16px;
+	color: #444; /* Цвет текста */
+}
+
+/* Добавим анимацию при наведении на элементы списка */
+.roll-info__highlight-item:hover {
+	color: #ff6600; /* Изменяем цвет текста при наведении */
+	cursor: default;
+	transition: color 0.3s ease; /* Добавляем плавное изменение цвета */
+}
+.icon {
+	margin-right: 8px; /* Добавим небольшой отступ между иконкой и текстом */
+	vertical-align: middle; /* Чтобы иконки были выровнены по центру относительно текста */
+	/* width: 20px; */
+}
+.roll-info__btn {
+	display: flex;
+	justify-content: center;
+}
+.roll-info__btn button {
+	padding: 20px;
+	font-size: 18px;
+}
