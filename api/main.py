@@ -42,4 +42,18 @@ with application.app_context():
 #     СreateMap()
 
 if __name__ == '__main__':
+    print("\n" + "="*60)
+    print("ЗАРЕГИСТРИРОВАННЫЕ МАРШРУТЫ:")
+    print("="*60)
+    with application.app_context():
+        for rule in application.url_map.iter_rules():
+            # Фильтруем статические маршруты, если нужно
+            if not rule.rule.startswith('/static'):
+                methods = ', '.join(sorted(rule.methods - {'HEAD', 'OPTIONS'}))
+                print(f"Route: {rule.rule:30} Methods: {methods:15} Endpoint: {rule.endpoint}")
+    print("="*60)
+    print(f"Всего маршрутов: {len([r for r in application.url_map.iter_rules() if not r.rule.startswith('/static')])}")
+    print("="*60 + "\n")
+
+    print("Запуск сервера на http://127.0.0.1:5001")
     application.run(debug=True, port=5001)

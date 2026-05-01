@@ -6,7 +6,11 @@
 
 body {
 	padding: 50px 0;
-	background-color: $background;
+	//background-color: $background;
+	background-color: #F39404;
+	@media screen and (max-width: 991px) {
+		padding: 20px 0;
+	}
 }
 
 .wrapper {
@@ -17,6 +21,9 @@ body {
 
 	border-radius: 10px;
 	max-width: 1400px;
+	@media screen and (max-width: 991px) {
+		width: calc(100vw - 40px);
+	}
 }
 
 .content {
@@ -25,6 +32,9 @@ body {
 	&__title {
 		margin: 35px 0;
 		color: $black;
+		@media screen and (max-width: 991px) {
+			margin: 15px 0;
+		}
 	}
 
 	&__items {
@@ -150,7 +160,9 @@ body {
 			flex-direction: column;
 			justify-content: center;
 			width: 40%;
-
+			@media screen and (max-width: 991px) {
+				width: 100%;
+			}
 			h3 {
 				font-weight: bold;
 				font-size: 22px;
@@ -359,7 +371,7 @@ body {
 		&__item {
 			flex-direction: column;
 			align-items: center;
-			row-gap: 15px;
+			row-gap: 8px;
 			text-align: center;
 			margin-top: 10px;
 			&-count {

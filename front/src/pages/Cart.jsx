@@ -43,7 +43,7 @@ export default function Cart() {
 		let newTotalPrice = 0;
 		cartItems.forEach((item) => {
 			newTotalQuantity += item.quantity;
-			newTotalPrice += item.quantity * item.price;
+			newTotalPrice += item.price;
 		});
 		setTotalQuantity(newTotalQuantity);
 		setTotalPrice(newTotalPrice);

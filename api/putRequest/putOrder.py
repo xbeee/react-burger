@@ -4,7 +4,7 @@ from sqlalchemy.exc import IntegrityError  # Добавьте в импорты
 from flask_jwt_extended import jwt_required, get_jwt_identity
 import uuid
 
-@application.route('/addCart', methods=['POST'])
+@application.route('/api/addCart', methods=['POST'])
 @jwt_required()
 def add_to_cart():
     data = request.get_json()
@@ -45,7 +45,7 @@ def add_to_cart():
         db.session.rollback()
         return jsonify({"error": "Неизвестная ошибка", "details": str(e)}), 500
       
-@application.route('/updateCartItem', methods=['PUT'])
+@application.route('/api/updateCartItem', methods=['PUT'])
 def update_cart_item():
     data = request.json
     product_id = data.get('productId')
@@ -67,7 +67,7 @@ def update_cart_item():
         print('Ошибка при обновлении количества товара:', str(e))
         return jsonify({'error': 'Ошибка сервера при обновлении количества товара'}), 500
 
-@application.route('/deleteCartItem/<int:item_id>', methods=['DELETE'])
+@application.route('/api/deleteCartItem/<int:item_id>', methods=['DELETE'])
 @jwt_required()
 def delete_cart_item(item_id):
   # Получаем имя пользователя из JWT токена
@@ -94,7 +94,7 @@ def delete_cart_item(item_id):
     db.session.rollback()
     return {"error": "Произошла ошибка при удалении товара из корзины"}, 500
 
-@application.route('/clearCart', methods=['DELETE'])
+@application.route('/api/clearCart', methods=['DELETE'])
 @jwt_required()
 def clear_cart():
     # Получаем email пользователя из JWT токена
@@ -116,7 +116,7 @@ def clear_cart():
         return jsonify({'error': 'Произошла ошибка при очистке корзины'}), 500
 
 
-@application.route('/userOrders', methods=['GET'])
+@application.route('/api/userOrders', methods=['GET'])
 @jwt_required()
 def get_user_order():
   try:
@@ -147,7 +147,7 @@ def get_user_order():
     db.session.rollback()
     return jsonify({'message': 'Failed to add order', 'error': str(e)}), 500
 
-@application.route('/addOrder', methods=['POST'])
+@application.route('/api/addOrder', methods=['POST'])
 @jwt_required()
 def add_order():
   current_user_email = get_jwt_identity()

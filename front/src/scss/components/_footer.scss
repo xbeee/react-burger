@@ -47,7 +47,7 @@
 }
 
 .footer-about-button {
-	background-color: #fe5f1e;
+	background-color: #2c2c2c;
 	color: #fff;
 	border: none;
 	padding: 10px 20px;
@@ -62,12 +62,14 @@
 }
 
 .footer-about-button:hover {
-	background-color: #ff8b7f;
-	transform: scale(1.05);
+	background-color: #F39404;
 }
 .footer-contact{
 	display: flex;
 	flex-direction: column;
+	p a{
+		color: #2c2c2c;
+	}
 }
 @media (max-width: 1070px) {
 	.footer-container {

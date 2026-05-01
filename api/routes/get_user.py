@@ -1,7 +1,7 @@
 from core import *
 from instance.models import *
 
-@application.route('/users', methods=["GET"])
+@application.route('/api/users', methods=["GET"])
 # @jwt_required()
 def get_users():
     # current_user_email = get_jwt_identity()
@@ -23,7 +23,7 @@ def get_users():
         users_list.append(user_data)
     return jsonify(users_list)
 
-@application.route('/get_user', methods=['GET'])
+@application.route('/api/get_user', methods=['GET'])
 @jwt_required()
 def get_admin():
     try:

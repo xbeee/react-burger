@@ -1,7 +1,7 @@
 from instance.models import *
 from core import *
 
-@application.route('/login', methods=['POST'])
+@application.route('/api/login', methods=['POST'])
 def Login():
     try:
         name = request.json.get('username')
@@ -31,13 +31,13 @@ def Login():
     return {'access_token':token}
 
 # выход из акаунта
-@application.route('/logout', methods=["POST"])
+@application.route('/api/logout', methods=["POST"])
 def Logout():
     resp = jsonify({"msg":"logout successful"})
     unset_jwt_cookies(resp)
     return resp
 
-@application.route('/register', methods=['POST'])
+@application.route('/api/register', methods=['POST'])
 def Register():
     try:
         fullName = request.json.get('fullName') # Получение данных из формы

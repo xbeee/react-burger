@@ -13,6 +13,10 @@
 	margin-top: 20px;
 	display: flex;
 	justify-content: space-between;
+	@media screen and (max-width: 991px) {
+		flex-direction: column;
+		gap: 8px;
+	}
 }
 
 .order-summary p {

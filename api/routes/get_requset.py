@@ -2,7 +2,7 @@ from core import *
 from instance.models import *
 
 
-@application.route('/getUser', methods=["GET"])
+@application.route('/api/getUser', methods=["GET"])
 @jwt_required()
 def get_user():
     user_email = get_jwt()["sub"]
@@ -25,7 +25,7 @@ def get_user():
     }
 
 
-@application.route('/editUser', methods=['POST'])
+@application.route('/api/editUser', methods=['POST'])
 @jwt_required()
 def edit_user():
 
@@ -68,7 +68,7 @@ def edit_user():
     return {"error": "Произошла ошибка при сохранении данных. Проверьте уникальность email и номера телефона."}, 400
 
 
-@application.route('/getCart', methods=['GET'])
+@application.route('/api/getCart', methods=['GET'])
 @jwt_required()
 def get_cart():
   try:
@@ -103,7 +103,7 @@ def get_cart():
     
 
 
-@application.route('/userOrders', methods=["GET"])
+@application.route('/api/userOrders', methods=["GET"])
 @jwt_required()
 def get_user_orders():
     current_user_email = get_jwt_identity()
@@ -131,7 +131,7 @@ def get_user_orders():
 
     return jsonify({'orders': user_orders}), 200
   
-@application.route('/deleteOrder/<string:order_id>', methods=['DELETE'])
+@application.route('/api/deleteOrder/<string:order_id>', methods=['DELETE'])
 def delete_order(order_id):
   try:
     orders_to_delete = Order.query.filter_by(order_id=order_id).all()

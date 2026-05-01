@@ -6,7 +6,7 @@ from werkzeug.utils import secure_filename
 import os
 
 
-@application.route('/addRolls', methods=["PUT"])
+@application.route('/api/addRolls', methods=["PUT"])
 @jwt_required()
 def putItem():
     name = get_jwt()['sub']
@@ -49,7 +49,7 @@ def putItem():
     }
     return resp, 200
 
-@application.route('/addItemAdmin', methods=['POST'])
+@application.route('/api/addItemAdmin', methods=['POST'])
 def add_item():
     try:
         # Получение данных из запроса

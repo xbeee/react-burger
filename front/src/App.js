@@ -11,7 +11,7 @@ import Cart from "./pages/Cart";
 import AdminPanel from "./pages/AdminPanel/AdminPanel";
 import Order from "./pages/Order/Order";
 import Footer from "./components/Footer";
-import RollInfo from "./pages/RollInfo/RollInfo";
+import ProductInfo from "./pages/ProductInfo/ProductInfo";
 
 function App() {
 	const [userToken, setUserToken] = React.useState(null);
@@ -55,7 +55,7 @@ function App() {
 							/>
 							<Route
 								path="/about"
-								element={<RollInfo />}
+								element={<ProductInfo />}
 							/>
 							<Route
 								path="/orders"

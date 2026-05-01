@@ -2,8 +2,8 @@ import React, { useEffect } from "react";
 import "./AdminPanel.scss";
 import axios from "axios";
 import EditProfle from "../../components/EditProfle";
-import AddRoll from "../../components/AddRoll";
-import EditRoll from "../../components/EditRoll";
+import AddProduct from "../../components/AddProduct";
+import EditProduct from "../../components/EditProduct";
 import { Navigate, useNavigate } from "react-router-dom";
 import EditProfile from "../../components/EditProfle";
 import {BASE_URL} from "../../constants";
@@ -51,8 +51,8 @@ export default function AdminPanel() {
 							<button onClick={() => setActiveSection("editRoll")}>Изменение товара</button>
 						</div>
 						{activeSection === "users" && <EditProfile users={users} />}
-						{activeSection === "addRoll" && <AddRoll />}
-						{activeSection === "editRoll" && <EditRoll allroll={rolls} />}
+						{activeSection === "addRoll" && <AddProduct />}
+						{activeSection === "editRoll" && <EditProduct allroll={rolls} />}
 					</div>
 				) : (
 					<Navigate to="/" />

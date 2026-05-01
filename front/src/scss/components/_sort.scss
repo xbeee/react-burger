@@ -17,12 +17,14 @@
 
 		b {
 			margin-right: 8px;
+			white-space: nowrap;
 		}
 
 		span {
 			color: $orange;
 			border-bottom: 1px dashed $orange;
 			cursor: pointer;
+			white-space: nowrap;
 		}
 	}
 

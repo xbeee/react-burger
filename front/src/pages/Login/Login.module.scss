@@ -39,22 +39,27 @@
 .inputIcon {
 	position: absolute;
 	left: 10px;
-	top: 44%;
+	//top: 44%;
+	top: 50%;
+	margin-top: 4px;
+	transform: translateY(-50%);
 	color: #232323;
 }
 
 .formControl_login {
 	// width: calc(100% - 20px);
 	width: 100%;
-	padding: 20px 10px 10px 40px;
+	padding: 10px 10px 10px 40px;
 	border-radius: 5px;
 	border: 1px solid #fff;
 	outline: none;
 	transition: border-color 0.3s;
+	background-color: white;
+	color: #2c2c2c;
 }
 
 .formControl:focus {
-	border-color: #fe5f1e;
+	border-color: #F39404;
 }
 
 .btnPrimary {
@@ -63,7 +68,7 @@
 	padding: 10px;
 	border: none;
 	border-radius: 5px;
-	background-color: #fe5f1e;
+	background-color: #F39404;
 	color: #fff;
 	font-weight: bold;
 	cursor: pointer;
@@ -98,7 +103,7 @@
 }
 
 .registerLink a {
-	color: #fe5f1e;
+	color: #F39404;
 	text-decoration: none;
 }
 

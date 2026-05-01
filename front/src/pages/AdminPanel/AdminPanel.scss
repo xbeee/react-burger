@@ -57,6 +57,7 @@
 		display: flex;
 		gap: 10px;
 
+
 		button {
 			padding: 8px 12px;
 			border: none;
@@ -188,6 +189,8 @@
 		border-radius: 6px;
 		box-sizing: border-box;
 		font-size: 16px;
+		background-color: white;
+		color: #2c2c2c;
 	}
 	input[type="file"] {
 		width: 100%;
@@ -311,11 +314,17 @@
 		padding: 5px;
 		border: 1px solid #ccc;
 		border-radius: 4px;
+
+	}
+	input{
+		background-color: white;
+		color: #2c2c2c;
 	}
 
 	.edit-actions {
 		display: flex;
 		gap: 10px;
+		justify-content: end;
 
 		button {
 			padding: 8px 12px;

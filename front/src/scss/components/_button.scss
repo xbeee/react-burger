@@ -25,11 +25,11 @@
 	}
 
 	&:hover {
-		background-color: darken($orange, 8%);
+		background-color: darken(#F39404, 0%);
 	}
 
 	&:active {
-		background-color: darken($orange, 12%);
+		background-color: darken(#F39404, 12%);
 		transform: translateY(1px);
 	}
 
@@ -55,20 +55,20 @@
 
 	&--outline {
 		background-color: #fff;
-		border-color: $orange;
+		border-color: #F39404;
 		&,
 		span {
-			color: $orange;
+			color: #F39404;
 		}
 
 		svg {
 			path {
-				fill: $orange;
+				fill: #F39404;
 			}
 		}
 
 		&:hover {
-			background-color: $orange;
+			background-color: #F39404;
 
 			&,
 			span {
@@ -83,7 +83,7 @@
 		}
 
 		&:active {
-			background-color: darken($orange, 8%);
+			background-color: darken(#F39404, 8%);
 		}
 	}
 
@@ -108,14 +108,14 @@
 		&:hover {
 			i {
 				background-color: #fff;
-				color: $orange;
+				color: #F39404;
 			}
 		}
 
 		i {
 			display: inline-block;
 			border-radius: 30px;
-			background-color: $orange;
+			background-color: #F39404;
 			color: #fff;
 			font-weight: 600;
 			width: 22px;
@@ -131,11 +131,11 @@
 	&--added {
 		width: 100%;
 		background-color: white;
-		border: 2px solid $orange;
+		border: 2px solid #F39404;
 		transition: 0.3s;
 
 		span {
-			color: $orange;
+			color: #F39404;
 			font-weight: 600;
 			font-size: 16px;
 		}

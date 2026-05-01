@@ -2,7 +2,7 @@ from core import *
 from instance.models import *
 
 # все товары 
-@application.route('/rolls', methods=["GET"])
+@application.route('/api/rolls', methods=["GET"])
 def GetRoll():
   try:
     rolls = Rolls.query.all()

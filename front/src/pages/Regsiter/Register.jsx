@@ -248,7 +248,7 @@ export default function Register() {
 								required
 							/>
 						</div>
-						{errors.phoneNumber && <span className={styles.errorText}>{errors.phoneNumber}</span>}
+						{errors.phoneNumber && <span className={styles.error_text}>{errors.phoneNumber}</span>}
 					</div>
 
 					<div className={styles.formGroup}>

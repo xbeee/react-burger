@@ -24,13 +24,13 @@ const Footer = () => {
 					<Link to="/about" className="footer-about-button">
 						<Link to="/about">О нас</Link>
 					</Link>
-					<p>Email: contact@sushi.com</p>
-					<a
-						href="tel:+79997775588"
-						className="phone-footer"
-					>
-						<p>Phone: +7 (999)-777-55-88</p>
-					</a>
+					<p>Почта: <a 	className="phone-footer" href="mailto:contact@burger.com">contact@burger.com</a></p>
+
+						<p>Телефон: <a
+							href="tel:+79997775588"
+							className="phone-footer"
+						>+7 (999)-777-55-88</a></p>
+
 				</div>
 				{/* <div className="footer-social"> */}
 					{/* <a

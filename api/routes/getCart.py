@@ -2,10 +2,10 @@ from core import *
 from instance.models import *
 
 
-@application.route('/getCart', methods=["GET"])
+@application.route('/api/getCart', methods=["GET"])
 @jwt_required()
 def getuser():
-  cart = Cart.query.all();
+  cart = Cart.query.all()
   resp = []
   for el in cart:
     row = {

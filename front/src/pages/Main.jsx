@@ -1,9 +1,9 @@
 import React from "react";
 import Categories from "../components/Categories";
 import SortPopup from "../components/SortPopup";
-import RollItem from "../components/RollItem";
 import axios from "axios";
 import {BASE_URL} from "../constants";
+import ProductItem from "../components/ProductItem";
 
 export default function Main() {
     const [roll, setRoll] = React.useState([]);
@@ -96,7 +96,7 @@ export default function Main() {
                 />
                 <SortPopup onSelectSortType={onSelectSortType} />
             </div>
-            <h2 className="content__title">Все роллы</h2>
+            <h2 className="content__title">Все бургеры</h2>
             {isLoading ? (
                 <div className="loaderContainer">
                     <span className="loader"></span>
@@ -104,7 +104,7 @@ export default function Main() {
             ) : (
                 <div className="content__items">
                     {sortedRoll.map((obj) => (
-                        <RollItem
+                        <ProductItem
                             key={obj.id}
                             rollCart={rollCart}
                             {...obj}

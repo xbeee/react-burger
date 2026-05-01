@@ -7,7 +7,7 @@ import sys
 import os
 sys.path.append('../')
 # изменение товара в админке
-@application.route('/editRoll/<int:roll_id>', methods=['POST'])
+@application.route('/api/editRoll/<int:roll_id>', methods=['POST'])
 def edit_roll(roll_id):
   
     try:
@@ -62,7 +62,7 @@ def edit_roll(roll_id):
     except Exception as e:
         return jsonify({"error": str(e)}), 500
     
-@application.route('/deleteRoll/<int:roll_id>', methods=['DELETE'])
+@application.route('/api/deleteRoll/<int:roll_id>', methods=['DELETE'])
 def delete_roll(roll_id):
     try:
         roll = Rolls.query.filter_by(id=roll_id).first()
@@ -89,7 +89,7 @@ def delete_roll(roll_id):
         db.session.rollback()
         return jsonify({"error": str(e)}), 500
 
-@application.route('/deleteUser/<int:user_id>', methods=['DELETE'])
+@application.route('/api/deleteUser/<int:user_id>', methods=['DELETE'])
 def delete_user(user_id):
     try:
         user = User.query.filter_by(id=user_id).first()

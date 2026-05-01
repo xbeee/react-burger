@@ -18,8 +18,12 @@ export default function CartItem({ id, product_name, imageURL, product_type, pro
 	const [snackbarMessage, setSnackbarMessage] = React.useState("");
 	const [openConfirmationDialog, setOpenConfirmationDialog] = React.useState(false); // Добавляем состояние для отображения модального окна
 
+	const unitPrice = React.useMemo(() => {
+		return quantity > 0 ? price / quantity : 0;
+	}, [quantity]);
+
 	React.useEffect(() => {
-		setTotalPriceItem(price * quantity);
+		setTotalPriceItem(unitPrice * quantityRoll);
 	}, [price, quantity]);
 
 	const debouncedHandleQuantityChange = async (change) => {
@@ -27,10 +31,16 @@ export default function CartItem({ id, product_name, imageURL, product_type, pro
 		setIsChange(true);
 		if (newQuantity >= 1) {
 			setQuantityRoll(newQuantity);
-			setTotalPriceItem(newQuantity * price);
-
-			await sendUpdateToServer({ quantity: newQuantity, price: price, productId: product_id, product_type: product_type, product_size: product_size });
-			await updateCartTotal({ id, product_name, imageURL, product_type, product_size, quantity: newQuantity, price: price, productId: product_id });
+			setTotalPriceItem(newQuantity * unitPrice);
+			const newTotalPrice = newQuantity * unitPrice;
+			console.log(product_id, product_name)
+			await sendUpdateToServer({
+				quantity: newQuantity,
+				price: newTotalPrice,
+				productId: product_id,
+				product_type: product_type,
+				product_size: product_size });
+			await updateCartTotal({ id, product_name, imageURL, product_type, product_size, quantity: newQuantity, 	price: newTotalPrice, productId: product_id });
 			setIsChange(false);
 		}
 	};

@@ -4,11 +4,14 @@
 	width: 280px;
 	text-align: center;
 	margin-bottom: 20px;
+	display: flex;
+	flex-direction: column;
+
 
 	&__image {
 		width: 100%;
 		height: 170px;
-		object-fit: cover;
+		object-fit: contain;
 	}
 
 	&__title {
@@ -18,6 +21,9 @@
 		margin-bottom: 20px;
 		margin-top: 20px;
 		color: $black;
+		@media screen and (max-width: 991px) {
+			margin-bottom: 0;
+		}
 	}
 
 	&__selector {
@@ -69,6 +75,16 @@
 		line-height: 27px;
 		letter-spacing: 0.015em;
 	}
+	&__info{
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		span{
+			font-size: 14px;
+			font-weight: 400;
+			color: #2c2c2c;
+		}
+	}
 }
 
 .roll-block__bottom {
@@ -76,14 +92,15 @@
 	flex-wrap: wrap;
 	align-items: center;
 	justify-content: space-between;
-	margin-top: 20px;
+	padding-top: 20px;
+	margin-top: auto;
+	gap: 10px;
 
 	.roll-block__price {
 		font-weight: bold;
 		font-size: 22px;
 		line-height: 27px;
 		letter-spacing: 0.015em;
-		margin-bottom: 10px;
 	}
 
 	.counter {
@@ -111,10 +128,17 @@
 	.button--add {
 		width: 100%;
 		min-width: auto;
+		display: flex;
+		align-items: center;
+		gap: 8px;
+		justify-content: center;
 		&:disabled {
 			opacity: 0.7;
 			cursor: not-allowed;
 			background-color: #232323;
+		}
+		&:hover{
+			background-color: #F39404;
 		}
 	}
 }
@@ -123,7 +147,6 @@
 	display: flex;
 	align-items: center;
 	gap: 10px;
-	margin-bottom: 10px;
 	span {
 		font-size: 21px;
 		font-weight: bold;
